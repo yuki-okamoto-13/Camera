@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-Zp-73C" userLabel="Camera View">
+                                <rect key="frame" x="0.0" y="59" width="393" height="561.33333333333337"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VdQ-Zp-73C" secondAttribute="height" multiplier="7:10" id="KCj-mm-9kS"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-bo-8al">
+                                <rect key="frame" x="0.0" y="59" width="393" height="561.33333333333337"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZlL-9J-8BU" userLabel="Action View">
+                                <rect key="frame" x="0.0" y="620.33333333333337" width="393" height="197.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-rh-Ai7" userLabel="Shutter Button">
+                                        <rect key="frame" x="184.33333333333334" y="135.33333333333326" width="24.666666666666657" height="21"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="camera.shutter.button" catalog="system"/>
+                                        <connections>
+                                            <action selector="onTapShutterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AlG-RO-nf0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O44-fu-2bk" userLabel="Photo Farme Button">
+                                        <rect key="frame" x="171.66666666666666" y="30.000000000000007" width="50" height="71.666666666666686"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="O44-fu-2bk" secondAttribute="height" multiplier="7:10" id="Q4d-vX-lC2"/>
+                                            <constraint firstAttribute="width" constant="50" id="SOq-IB-LbC"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="frame0073"/>
+                                        <connections>
+                                            <action selector="onTapPhotoFrameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opQ-eh-kCz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0b4-nC-Ndj" userLabel="Change Camera Button">
+                                        <rect key="frame" x="333.33333333333331" y="138.33333333333326" width="19.666666666666686" height="19"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="repeat.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="onTapChangeCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7v4-uk-AkB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XEX-rh-Ai7" firstAttribute="centerX" secondItem="ZlL-9J-8BU" secondAttribute="centerX" id="39U-B6-LAD"/>
+                                    <constraint firstAttribute="bottom" secondItem="0b4-nC-Ndj" secondAttribute="bottom" constant="40" id="3ox-OZ-sXY"/>
+                                    <constraint firstAttribute="bottom" secondItem="XEX-rh-Ai7" secondAttribute="bottom" constant="40" id="JP0-oF-2OU"/>
+                                    <constraint firstAttribute="trailing" secondItem="0b4-nC-Ndj" secondAttribute="trailing" constant="40" id="P5T-XB-2Ja"/>
+                                    <constraint firstItem="O44-fu-2bk" firstAttribute="centerX" secondItem="ZlL-9J-8BU" secondAttribute="centerX" id="qTq-ap-RTu"/>
+                                    <constraint firstItem="O44-fu-2bk" firstAttribute="top" secondItem="ZlL-9J-8BU" secondAttribute="top" constant="30" id="zhp-9U-fVd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VdQ-Zp-73C" firstAttribute="bottom" secondItem="lrZ-bo-8al" secondAttribute="bottom" id="EXI-Rn-FNo"/>
+                            <constraint firstItem="VdQ-Zp-73C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PJ4-Mb-CRO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZlL-9J-8BU" secondAttribute="trailing" id="PSE-wp-0qq"/>
+                            <constraint firstItem="lrZ-bo-8al" firstAttribute="top" secondItem="VdQ-Zp-73C" secondAttribute="top" id="S5L-v3-KJr"/>
+                            <constraint firstItem="lrZ-bo-8al" firstAttribute="trailing" secondItem="VdQ-Zp-73C" secondAttribute="trailing" id="W03-8P-QTF"/>
+                            <constraint firstItem="VdQ-Zp-73C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bYe-v6-pCB"/>
+                            <constraint firstItem="ZlL-9J-8BU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hNP-T6-qfI"/>
+                            <constraint firstItem="lrZ-bo-8al" firstAttribute="leading" secondItem="VdQ-Zp-73C" secondAttribute="leading" id="non-Kz-snr"/>
+                            <constraint firstItem="ZlL-9J-8BU" firstAttribute="top" secondItem="VdQ-Zp-73C" secondAttribute="bottom" id="vMu-ZH-dqv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VdQ-Zp-73C" secondAttribute="trailing" id="vuy-mA-8LG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZlL-9J-8BU" secondAttribute="bottom" id="wYw-wh-dEc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VdQ-Zp-73C" secondAttribute="trailing" id="zJE-MU-26q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="VdQ-Zp-73C" id="hQN-0X-GRJ"/>
+                        <outlet property="photoFrameImageView" destination="lrZ-bo-8al" id="CxH-1c-kcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.shutter.button" catalog="system" width="128" height="108"/>
+        <image name="frame0073" width="1400" height="2000"/>
+        <image name="repeat.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
